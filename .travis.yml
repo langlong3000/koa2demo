@@ -1,7 +1,7 @@
 language: node_js
 node_js:
 - 8.10.0
-before_script:
+script:
 - npm test
 after_script:
 - scp -o StrictHostKeyChecking=no ./app.js root@101.200.37.231:/root/code
