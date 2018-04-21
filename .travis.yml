@@ -1,13 +1,12 @@
 language: node_js
 node_js:
-  - 8.10.0
+- 8.10.0
 after_script:
-- scp -o StrictHostKeyChecking=no ./src/app.js yideng:/root/code
+- scp -o StrictHostKeyChecking=no ./app.js root@101.200.37.231:/root/code
 before_install:
-- openssl aes-256-cbc -K $encrypted_e3340b7988a5_key -iv $encrypted_e3340b7988a5_iv
-  -in id_rsa.enc -out id_rsa -d
-- mv id_rsa ~/.ssh -f
-- chmod 600 ~/.ssh/id_rsa
-- eval $(ssh-agent)
-- ssh-add ~/.ssh/id_rsa
-- cp .travis/ssh_config ~/.ssh/config
+- openssl aes-256-cbc -K $encrypted_7ca871ec14ed_key -iv $encrypted_7ca871ec14ed_iv
+  -in langlong3000_rsa.enc -out ~/.ssh/langlong3000_rsa -d
+  -chmod 600 ~/.ssh/langlong3000_rsa
+  -eval $(ssh-agent)
+  -ssh-add ~/.ssh/langlong3000_rsa
+
