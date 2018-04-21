@@ -6,7 +6,7 @@ after_script:
 before_install:
 - openssl aes-256-cbc -K $encrypted_7ca871ec14ed_key -iv $encrypted_7ca871ec14ed_iv
   - in langlong3000_rsa.enc -out ~/.ssh/langlong3000_rsa -d
-  - chmod 600 ~/.ssh/langlong3000_rsa
-  - eval $(ssh-agent)
-  - ssh-add ~/.ssh/langlong3000_rsa
+- chmod 600 ~/.ssh/langlong3000_rsa
+- eval $(ssh-agent)
+- ssh-add ~/.ssh/langlong3000_rsa
 
