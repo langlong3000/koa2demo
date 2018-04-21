@@ -2,7 +2,7 @@ language: node_js
 node_js:
 - 8.10.0
 
-after_script:
+after_success:
 - scp -o StrictHostKeyChecking=no ./app.js root@101.200.37.231:/root/code
 before_install:
 - openssl aes-256-cbc -K $encrypted_7ca871ec14ed_key -iv $encrypted_7ca871ec14ed_iv
